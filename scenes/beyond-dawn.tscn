@@ -1,8 +1,9 @@
-[gd_scene load_steps=10 format=4 uid="uid://ngg6jm34ytaj"]
+[gd_scene load_steps=11 format=4 uid="uid://ngg6jm34ytaj"]
 
-[ext_resource type="Texture2D" uid="uid://c5uuwil1b3tk" path="res://Pixel Art Platformer - Village Props v2.3.0/Texture/TX Tileset Ground.png" id="1_waacf"]
-[ext_resource type="Texture2D" uid="uid://cvona8kobif6w" path="res://Pixel Art Platformer - Village Props v2.3.0/Texture/TX Village Props.png" id="2_3i8no"]
-[ext_resource type="Texture2D" uid="uid://3it6oru3n0qp" path="res://Background_0.png" id="3_0jlyn"]
+[ext_resource type="Texture2D" uid="uid://c5uuwil1b3tk" path="res://assets/art/Pixel Art Platformer - Village Props v2.3.0/Texture/TX Tileset Ground.png" id="1_waacf"]
+[ext_resource type="Texture2D" uid="uid://cvona8kobif6w" path="res://assets/art/Pixel Art Platformer - Village Props v2.3.0/Texture/TX Village Props.png" id="2_3i8no"]
+[ext_resource type="Texture2D" uid="uid://3it6oru3n0qp" path="res://assets/art/Background_0.png" id="3_0jlyn"]
+[ext_resource type="PackedScene" uid="uid://chd0g8rk8k5ko" path="res://assets/characters/player/player.tscn" id="4_kt4ae"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_j4dvt"]
 texture = ExtResource("1_waacf")
@@ -2645,3 +2646,11 @@ z_index = -1
 position = Vector2(229, 333)
 scale = Vector2(5.75781, 1.62019)
 texture = ExtResource("3_0jlyn")
+
+[node name="Player" parent="." instance=ExtResource("4_kt4ae")]
+position = Vector2(-1349, 290)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2(-8, 18.6667)
+scale = Vector2(0.666667, 0.666667)
+zoom = Vector2(3, 3)
